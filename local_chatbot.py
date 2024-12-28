@@ -52,12 +52,12 @@ vector_store = Chroma.from_documents(
 retriever = vector_store.as_retriever()
 
 def chat():
-    print("Welcome to the Old English ChatBot! Type 'exit' to quit.\n")
+    print("Welcome to the Shakespearen English ChatBot! Type 'quit' to quit.\n")
 
     while True:
         user_input = input("You: ")
 
-        if user_input.lower() == 'exit':
+        if user_input.lower() == 'quit':
             print("Goodbye!")
             break
 
@@ -80,7 +80,7 @@ def chat():
 
          # Invoke the LLMChain and stream the result
         response = llm_chain.invoke(user_input)
-        print("OE-Bot:", response)
+        print("SE-Bot:", response)
 
 # Start the Chat
 chat()
